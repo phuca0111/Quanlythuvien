@@ -9833,11 +9833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BÀI TẬP\\Lập trình ứng dụng C#\\qltv\\qltv\\qltv.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Quanlythuvien\\qltv\\qltv\\qltv.csproj",
       "projectName": "qltv",
-      "projectPath": "D:\\BÀI TẬP\\Lập trình ứng dụng C#\\qltv\\qltv\\qltv.csproj",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\Quanlythuvien\\qltv\\qltv\\qltv.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\BÀI TẬP\\Lập trình ứng dụng C#\\qltv\\qltv\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\Quanlythuvien\\qltv\\qltv\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

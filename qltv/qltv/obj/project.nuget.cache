@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S2rlAmZ+VMl3HjGcmPsUCwIwEVCmQS0PKIvWexyC24Mur0KwQNpyhAPiAGtlcTvjWsaQ4F65qks8nXL3f4LT8A==",
+  "dgSpecHash": "Usi8PqB5nmgtJSmaNQxkbkORC998Vx/t3Mhz68bD+v5r3N1CAdvmWAFssxgLrc40OJlQMMAOYMl5N4qgY4B4ww==",
   "success": true,
-  "projectFilePath": "D:\\BÀI TẬP\\Lập trình ứng dụng C#\\qltv\\qltv\\qltv.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\Quanlythuvien\\qltv\\qltv\\qltv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.13.14\\humanizer.core.2.13.14.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
