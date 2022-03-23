@@ -1,0 +1,71 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "Vido_QltvContext",
+   "ContextNamespace": "data",
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": "Models",
+   "OutputContextPath": "data",
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "qltv",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Muon]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NhaXB]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Sach]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Sinhvien]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tacgia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TheLoai]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Thuthu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tra]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vitri]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "TANPHUC\\SQLEXPRESS.vido_qltv",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}
