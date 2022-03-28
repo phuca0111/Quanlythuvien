@@ -48,9 +48,13 @@
       {
          "Name": "[dbo].[Vitri]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Booklist]",
+         "ObjectType": 3
       }
    ],
-   "UiHint": "TANPHUC\\SQLEXPRESS.vido_qltv",
+   "UiHint": "pmsa-px01.Vido_QLTV.dbo",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDbContextSplitting": false,

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,10 @@ builder.Services.AddDbContext<qltv.data.Vido_QltvContext>(
     options =>
     {
         options.UseSqlServer(connectionString: builder.Configuration.GetConnectionString("vido_qltvDB"));
+    
     });
+builder.Services.AddMvc(option => option.EnableEndpointRouting = false)
+    .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
 var app = builder.Build();
 

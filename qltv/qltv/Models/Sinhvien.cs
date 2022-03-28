@@ -21,6 +21,7 @@ namespace qltv.Models
         public string Matkhau { get; set; }
         public string SoCmnd { get; set; }
         public DateTime? Ngaysinh { get; set; }
+        public string Khoa { get; set; }
 
         public virtual ICollection<Muon> Muons { get; set; }
     }

@@ -20,6 +20,8 @@ namespace qltv.Models
         public int NamXb { get; set; }
         public int Soban { get; set; }
         public int VitriId { get; set; }
+        public string Masach { get; set; }
+        public byte[] Img { get; set; }
 
         public virtual NhaXb NhaXb { get; set; }
         public virtual Tacgia Tacgia { get; set; }

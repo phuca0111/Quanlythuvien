@@ -19,6 +19,7 @@ namespace qltv.data
         {
         }
 
+        public virtual DbSet<Booklist> Booklists { get; set; }
         public virtual DbSet<Muon> Muons { get; set; }
         public virtual DbSet<NhaXb> NhaXbs { get; set; }
         public virtual DbSet<Sach> Saches { get; set; }
@@ -31,13 +32,47 @@ namespace qltv.data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Booklist>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("Booklist");
+
+                entity.Property(e => e.NamXb).HasColumnName("NamXB");
+
+                entity.Property(e => e.Tacgia)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.TenNxb)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnName("TenNXB");
+
+                entity.Property(e => e.Tensach)
+                    .IsRequired()
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.Theloai).HasMaxLength(100);
+
+                entity.Property(e => e.VitriHang)
+                    .IsRequired()
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.VitriKe)
+                    .IsRequired()
+                    .HasMaxLength(20);
+            });
+
             modelBuilder.Entity<Muon>(entity =>
             {
                 entity.ToTable("Muon");
 
-                entity.HasIndex(e => e.SinhvienId, "IFK_MuonSinhvienId");
+                entity.HasIndex(e => e.SinhvienId, "IFK_MuonSinhvienId")
+                    .HasFillFactor(80);
 
-                entity.HasIndex(e => e.ThuthuId, "IFK_MuonThuthuId");
+                entity.HasIndex(e => e.ThuthuId, "IFK_MuonThuthuId")
+                    .HasFillFactor(80);
 
                 entity.Property(e => e.MuonId).ValueGeneratedNever();
 
@@ -66,7 +101,7 @@ namespace qltv.data
             {
                 entity.ToTable("NhaXB");
 
-                entity.HasIndex(e => e.Email, "UQ__NhaXB__A9D105341CE00A7A")
+                entity.HasIndex(e => e.Email, "UQ__NhaXB__A9D10534F265F4C5")
                     .IsUnique();
 
                 entity.Property(e => e.NhaXbid)
@@ -93,15 +128,21 @@ namespace qltv.data
             {
                 entity.ToTable("Sach");
 
-                entity.HasIndex(e => e.NhaXbid, "IFK_SachNhaXBId");
+                entity.HasIndex(e => e.NhaXbid, "IFK_SachNhaXBId")
+                    .HasFillFactor(80);
 
-                entity.HasIndex(e => e.TacgiaId, "IFK_SachTacgiaId");
+                entity.HasIndex(e => e.TacgiaId, "IFK_SachTacgiaId")
+                    .HasFillFactor(80);
 
-                entity.HasIndex(e => e.TheloaiId, "IFK_SachTheloaiId");
+                entity.HasIndex(e => e.TheloaiId, "IFK_SachTheloaiId")
+                    .HasFillFactor(80);
 
-                entity.HasIndex(e => e.VitriId, "IFK_SachVitriId");
+                entity.HasIndex(e => e.VitriId, "IFK_SachVitriId")
+                    .HasFillFactor(80);
 
                 entity.Property(e => e.SachId).ValueGeneratedNever();
+
+                entity.Property(e => e.Masach).HasMaxLength(30);
 
                 entity.Property(e => e.NamXb).HasColumnName("NamXB");
 
@@ -140,13 +181,7 @@ namespace qltv.data
             {
                 entity.ToTable("Sinhvien");
 
-                entity.HasIndex(e => e.SinhvienId, "UQ__Sinhvien__1597189123578A58")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.Email, "UQ__Sinhvien__A9D105349889D1EC")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.SoCmnd, "UQ__Sinhvien__F5EEA1C66094A192")
+                entity.HasIndex(e => e.SinhvienId, "UQ__Sinhvien__159718919C34B278")
                     .IsUnique();
 
                 entity.Property(e => e.SinhvienId).ValueGeneratedNever();
@@ -159,16 +194,24 @@ namespace qltv.data
                     .IsRequired()
                     .HasMaxLength(60);
 
+                entity.Property(e => e.Khoa).HasMaxLength(60);
+
                 entity.Property(e => e.Lop)
                     .IsRequired()
                     .HasMaxLength(40);
+
+                entity.Property(e => e.Masosinhvien)
+                    .IsRequired()
+                    .HasMaxLength(30);
 
                 entity.Property(e => e.Matkhau)
                     .IsRequired()
                     .HasMaxLength(30);
 
+                entity.Property(e => e.Ngaysinh).HasColumnType("date");
+
                 entity.Property(e => e.SoCmnd)
-                    .HasMaxLength(1)
+                    .HasMaxLength(30)
                     .HasColumnName("SoCMND");
 
                 entity.Property(e => e.Tensinhvien)
@@ -193,7 +236,7 @@ namespace qltv.data
             {
                 entity.ToTable("TheLoai");
 
-                entity.HasIndex(e => e.TheloaiId, "UQ__TheLoai__F373B1D0D91C52BC")
+                entity.HasIndex(e => e.TheloaiId, "UQ__TheLoai__F373B1D0E682CFF8")
                     .IsUnique();
 
                 entity.Property(e => e.TheloaiId).ValueGeneratedNever();
@@ -205,10 +248,10 @@ namespace qltv.data
             {
                 entity.ToTable("Thuthu");
 
-                entity.HasIndex(e => e.Username, "UQ__Thuthu__536C85E44757E026")
+                entity.HasIndex(e => e.Username, "UQ__Thuthu__536C85E474970BE4")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Email, "UQ__Thuthu__A9D10534BDBF103B")
+                entity.HasIndex(e => e.Email, "UQ__Thuthu__A9D1053419BD7F3F")
                     .IsUnique();
 
                 entity.Property(e => e.ThuthuId).ValueGeneratedNever();
@@ -241,9 +284,11 @@ namespace qltv.data
             {
                 entity.ToTable("Tra");
 
-                entity.HasIndex(e => e.MuonId, "IFK_TraMuonId");
+                entity.HasIndex(e => e.MuonId, "IFK_TraMuonId")
+                    .HasFillFactor(80);
 
-                entity.HasIndex(e => e.ThuthuId, "IFK_TraThuthuId");
+                entity.HasIndex(e => e.ThuthuId, "IFK_TraThuthuId")
+                    .HasFillFactor(80);
 
                 entity.Property(e => e.TraId).ValueGeneratedNever();
 
