@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<qltv.data.Vido_QltvContext>(
+builder.Services.AddDbContext<qltv.Data.Vido_QltvContext>(
     options =>
     {
         options.UseSqlServer(connectionString: builder.Configuration.GetConnectionString("vido_qltvDB"));
@@ -24,6 +24,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

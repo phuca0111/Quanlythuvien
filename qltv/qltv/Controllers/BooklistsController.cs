@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using qltv.Models;
-using qltv.data;
+using qltv.Data;
 
 namespace qltv.Controllers
 {
@@ -21,41 +21,37 @@ namespace qltv.Controllers
         {
             _context = context;
         }
-        /*[HttpGet("GetSupplierFromBooklistname")]
-        public async Task<Booklist> GetSupplierFromBooklistname(string booklistName)
-        {
-            return await _context.Booklists
-                .Include(b => b.Tensach)
-                .Where(b => b.Tensach == booklistName)
-                .FirstOrDefaultAsync();
-        }*/
-
-        // GET: api/Saches
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Booklist>>> GetBooklists()
+        public async Task<ActionResult<IEnumerable<Booklist>>> Search(string search)
         {
-            return await _context.Booklists.ToListAsync();
-        }
-        // GET: api/Muons/5
-        [HttpGet("{Tensach}")]
-        public async Task<ActionResult<Booklist>> GetBooklist(string Tensach)
-        {
-            var booklist = await _context.Booklists.FindAsync(Tensach);
 
-            if (booklist == null)
+            int namxb;
+            bool success = Int32.TryParse(search, out namxb);
+    
+
+            if (search == null)
             {
-                return NotFound();
+                return await _context.Booklists.ToListAsync();
             }
 
-            return booklist;
+            if (!success)
+            {
+                namxb = 0;
+            }
+          
+
+
+            return await _context.Booklists
+                             .Where(p => p.Tensach.Contains(search) ||
+                                         p.Tentacgia.Contains(search) ||
+                                         p.Tentheloai.Contains(search) ||
+                                         p.Tenxuatban.Contains(search) ||
+                                         p.NamXb == namxb ||
+                                         p.Soke.Contains(search))
+                                        
+                                   
+                             .ToListAsync();
         }
-
-
-
-
-
-
-
 
     }
 }

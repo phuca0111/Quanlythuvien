@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using qltv.Models;
 
-namespace qltv.data
+namespace qltv.Data
 {
     public partial class Vido_QltvContext : DbContext
     {
@@ -40,28 +40,23 @@ namespace qltv.data
 
                 entity.Property(e => e.NamXb).HasColumnName("NamXB");
 
-                entity.Property(e => e.Tacgia)
+                entity.Property(e => e.Soke)
                     .IsRequired()
-                    .HasMaxLength(100);
-
-                entity.Property(e => e.TenNxb)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .HasColumnName("TenNXB");
+                    .HasMaxLength(20);
 
                 entity.Property(e => e.Tensach)
                     .IsRequired()
                     .HasMaxLength(200);
 
-                entity.Property(e => e.Theloai).HasMaxLength(100);
-
-                entity.Property(e => e.VitriHang)
+                entity.Property(e => e.Tentacgia)
                     .IsRequired()
-                    .HasMaxLength(20);
+                    .HasMaxLength(100);
 
-                entity.Property(e => e.VitriKe)
+                entity.Property(e => e.Tentheloai).HasMaxLength(100);
+
+                entity.Property(e => e.Tenxuatban)
                     .IsRequired()
-                    .HasMaxLength(20);
+                    .HasMaxLength(100);
             });
 
             modelBuilder.Entity<Muon>(entity =>
@@ -75,6 +70,10 @@ namespace qltv.data
                     .HasFillFactor(80);
 
                 entity.Property(e => e.MuonId).ValueGeneratedNever();
+
+                entity.Property(e => e.Masosinhvien)
+                    .IsRequired()
+                    .HasMaxLength(20);
 
                 entity.Property(e => e.Ngaymuon).HasColumnType("date");
 
@@ -317,9 +316,7 @@ namespace qltv.data
                     .IsRequired()
                     .HasMaxLength(20);
 
-                entity.Property(e => e.Tenhang)
-                    .IsRequired()
-                    .HasMaxLength(20);
+                entity.Property(e => e.Tenhang).HasMaxLength(1);
             });
 
             OnModelCreatingPartial(modelBuilder);

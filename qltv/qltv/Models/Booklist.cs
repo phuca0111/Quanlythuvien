@@ -8,12 +8,12 @@ namespace qltv.Models
     public partial class Booklist
     {
         public string Tensach { get; set; }
-        public string Tacgia { get; set; }
-        public string Theloai { get; set; }
-        public string TenNxb { get; set; }
+        public string Tentheloai { get; set; }
+        public string Tentacgia { get; set; }
+        public string Tenxuatban { get; set; }
         public int NamXb { get; set; }
         public int Soban { get; set; }
-        public string VitriHang { get; set; }
-        public string VitriKe { get; set; }
+        public string Soke { get; set; }
+        public byte[] Img { get; set; }
     }
 }

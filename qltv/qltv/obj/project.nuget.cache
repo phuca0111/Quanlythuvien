@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M1UnC2541/fj9tB3d7BNjgGQy2Loj/GH18OhS7aHW9yU1lYhvf0lERxXn0jLT/fi62siiooZBsHog5wnaScIDg==",
+  "dgSpecHash": "ltZpsdq/OjIxLI9h3qlmKyb5o/2gNrJvOV5W2Y0XCYvstP2PyoqdNs870XotdztaKflbYVNAy9FLj9Si7Hb1fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Desktop\\Quanlythuvien\\qltv\\qltv\\qltv.csproj",
   "expectedPackageFiles": [
@@ -40,7 +40,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0-preview.2.22153.1\\microsoft.entityframeworkcore.analyzers.7.0.0-preview.2.22153.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.0-preview.2.22153.1\\microsoft.entityframeworkcore.design.7.0.0-preview.2.22153.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.0-preview.2.22153.1\\microsoft.entityframeworkcore.relational.7.0.0-preview.2.22153.1.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.2\\microsoft.entityframeworkcore.sqlserver.6.0.2.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.3\\microsoft.entityframeworkcore.sqlserver.6.0.3.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.2\\microsoft.entityframeworkcore.tools.6.0.2.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0-preview.2.22152.2\\microsoft.extensions.caching.abstractions.7.0.0-preview.2.22152.2.nupkg.sha512",

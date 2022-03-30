@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using qltv.Models;
-using qltv.data;
+using qltv.Data;
 
 namespace qltv.Controllers
 {

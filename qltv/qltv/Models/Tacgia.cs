@@ -14,7 +14,7 @@ namespace qltv.Models
 
         public int TacgiaId { get; set; }
         public string Tentacgia { get; set; }
-        public DateTime Ngaysinh { get; set; }
+        public DateTime? Ngaysinh { get; set; }
 
         public virtual ICollection<Sach> Saches { get; set; }
     }
