@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ltZpsdq/OjIxLI9h3qlmKyb5o/2gNrJvOV5W2Y0XCYvstP2PyoqdNs870XotdztaKflbYVNAy9FLj9Si7Hb1fg==",
+  "dgSpecHash": "HRfqnBR28qAO2qVNUp95JDbjTSKD2PMgjpTUj3gWoVU4LWMkD6Z4vZNYkqkcNTu5PokfHvZUHcnLNFKFrDQlgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Desktop\\Quanlythuvien\\qltv\\qltv\\qltv.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.13.14\\humanizer.core.2.13.14.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",

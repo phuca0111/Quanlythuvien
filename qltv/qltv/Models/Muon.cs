@@ -7,11 +7,6 @@ namespace qltv.Models
 {
     public partial class Muon
     {
-        public Muon()
-        {
-            Tras = new HashSet<Tra>();
-        }
-
         public int MuonId { get; set; }
         public string Masosinhvien { get; set; }
         public int SinhvienId { get; set; }
@@ -22,6 +17,6 @@ namespace qltv.Models
         public virtual Sach Sach { get; set; }
         public virtual Sinhvien Sinhvien { get; set; }
         public virtual Thuthu Thuthu { get; set; }
-        public virtual ICollection<Tra> Tras { get; set; }
+        public virtual Tra Tra { get; set; }
     }
 }

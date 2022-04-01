@@ -556,3 +556,5 @@ C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\obj\Debug\net6.0\qltv.pdb
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\obj\Debug\net6.0\qltv.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
