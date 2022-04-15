@@ -24,9 +24,16 @@ namespace qltv.Controllers
 
         // GET: api/TheLoais
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TheLoai>>> GetTheLoais()
+        public async Task<ActionResult<IEnumerable<TheLoai>>> Search(string search)
         {
-            return await _context.TheLoais.ToListAsync();
+            if (search == null)
+            {
+                return await _context.TheLoais.ToListAsync();
+            }
+
+            return  await _context.TheLoais
+                             .Where(p => p.Tentheloai.Contains(search))
+                             .ToListAsync();
         }
 
         // GET: api/TheLoais/5

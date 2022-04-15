@@ -44,6 +44,10 @@ namespace qltv.Data
                     .IsRequired()
                     .HasMaxLength(20);
 
+                entity.Property(e => e.Masach)
+                    .IsRequired()
+                    .HasMaxLength(20);
+
                 entity.Property(e => e.Tensach)
                     .IsRequired()
                     .HasMaxLength(200);

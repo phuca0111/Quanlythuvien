@@ -24,9 +24,19 @@ namespace qltv.Controllers
 
         // GET: api/Thuthus
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Thuthu>>> GetThuthus()
+        public async Task<ActionResult<IEnumerable<Thuthu>>> Search(string search)
         {
-            return await _context.Thuthus.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Thuthus.ToListAsync();
+            }
+
+            return  await _context.Thuthus
+                             .Where(p => p.Hoten.Contains(search) ||
+                                         p.Sdt.Contains(search) ||
+                                         p.Diachi.Contains(search) ||
+                                         p.Email.Contains(search))
+                             .ToListAsync();
         }
 
         // GET: api/Thuthus/5

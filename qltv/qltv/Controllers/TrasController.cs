@@ -24,9 +24,26 @@ namespace qltv.Controllers
 
         // GET: api/Tras
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tra>>> GetTras()
+        public async Task<ActionResult<IEnumerable<Tra>>> Search(string search)
         {
-            return await _context.Tras.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Tras.ToListAsync();
+            }
+
+
+            int thuthuid;
+
+            bool success = Int32.TryParse(search, out thuthuid);
+
+            if (!success)
+            {
+                thuthuid = 0;
+            }
+
+            return  await _context.Tras
+                             .Where(p => p.ThuthuId == thuthuid)
+                             .ToListAsync();
         }
 
         // GET: api/Tras/5

@@ -283,7 +283,6 @@ C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\qltv.exe
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\qltv.deps.json
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\qltv.runtimeconfig.json
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\qltv.dll
-C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\ref\qltv.dll
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\qltv.pdb
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\Humanizer.dll
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\MessagePack.dll
@@ -558,3 +557,10 @@ C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\MySqlConnector.dl
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Desktop\Quanlythuvien\qltv\qltv\obj\Debug\net6.0\refint\qltv.dll

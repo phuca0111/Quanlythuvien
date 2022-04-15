@@ -24,9 +24,18 @@ namespace qltv.Controllers
 
         // GET: api/Tacgiums
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tacgia>>> GetTacgia()
+        public async Task<ActionResult<IEnumerable<Tacgia>>> Search(string search)
         {
-            return await _context.Tacgia.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Tacgia.ToListAsync();
+            }
+
+            return  await _context.Tacgia
+                             .Where(p => p.Tentacgia.Contains(search))
+                             .ToListAsync();
+
+
         }
 
         // GET: api/Tacgiums/5

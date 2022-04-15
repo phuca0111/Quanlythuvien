@@ -41,16 +41,16 @@ namespace qltv.Controllers
           
 
 
-            return await _context.Booklists
+            return  await _context.Booklists
                              .Where(p => p.Tensach.Contains(search) ||
                                          p.Tentacgia.Contains(search) ||
                                          p.Tentheloai.Contains(search) ||
                                          p.Tenxuatban.Contains(search) ||
+                                         p.Masach.Contains(search) ||   
                                          p.NamXb == namxb ||
                                          p.Soke.Contains(search))
-                                        
-                                   
                              .ToListAsync();
+                             
         }
 
     }

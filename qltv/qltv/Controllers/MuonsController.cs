@@ -1,4 +1,6 @@
-﻿#nullable disable
+﻿
+#nullable disable
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +26,17 @@ namespace qltv.Controllers
 
         // GET: api/Muons
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Muon>>> GetMuons()
+        public async Task<ActionResult<IEnumerable<Muon>>> Search(string search)
         {
-            return await _context.Muons.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Muons.ToListAsync();
+                
+            }
+
+            return  await _context.Muons
+                             .Where(p => p.Masosinhvien.Contains(search))
+                             .ToListAsync();
         }
 
         // GET: api/Muons/5
@@ -39,7 +49,6 @@ namespace qltv.Controllers
             {
                 return NotFound();
             }
-
             return muon;
         }
 
@@ -79,10 +88,11 @@ namespace qltv.Controllers
         [HttpPost]
         public async Task<ActionResult<Muon>> PostMuon(Muon muon)
         {
+            Tra tra = new Tra();
             _context.Muons.Add(muon);
             try
-            {
-                await _context.SaveChangesAsync();
+            {   
+                    await _context.SaveChangesAsync();   
             }
             catch (DbUpdateException)
             {
@@ -95,7 +105,6 @@ namespace qltv.Controllers
                     throw;
                 }
             }
-
             return CreatedAtAction("GetMuon", new { id = muon.MuonId }, muon);
         }
 
@@ -114,6 +123,7 @@ namespace qltv.Controllers
 
             return NoContent();
         }
+
 
         private bool MuonExists(int id)
         {

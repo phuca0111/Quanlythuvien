@@ -24,9 +24,22 @@ namespace qltv.Controllers
 
         // GET: api/Sinhviens
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Sinhvien>>> GetSinhviens()
+        public async Task<ActionResult<IEnumerable<Sinhvien>>> Search(string search)
         {
-            return await _context.Sinhviens.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Sinhviens.ToListAsync();
+            }
+
+            return  await _context.Sinhviens
+                             .Where(p => p.Masosinhvien.Contains(search) ||
+                                         p.Tensinhvien.Contains(search) ||
+                                         p.Diachi.Contains(search) ||
+                                         p.Lop.Contains(search) ||
+                                         p.Email.Contains(search) ||
+                                         p.SoCmnd.Contains(search)||
+                                         p.Khoa.Contains(search))
+                             .ToListAsync();
         }
 
         // GET: api/Sinhviens/5

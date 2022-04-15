@@ -24,9 +24,19 @@ namespace qltv.Controllers
 
         // GET: api/NhaXbs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<NhaXb>>> GetNhaXbs()
+        public async Task<ActionResult<IEnumerable<NhaXb>>> Search(string search)
         {
-            return await _context.NhaXbs.ToListAsync();
+           if (search == null)
+            {
+                return await _context.NhaXbs.ToListAsync();
+            }
+
+            return  await _context.NhaXbs
+                             .Where(p => p.Tenxuatban.Contains(search) ||
+                                         p.Diachi.Contains(search) ||
+                                         p.Email.Contains(search) ||
+                                         p.ThongtinNguoiDaiDien.Contains(search))
+                             .ToListAsync();
         }
 
         // GET: api/NhaXbs/5

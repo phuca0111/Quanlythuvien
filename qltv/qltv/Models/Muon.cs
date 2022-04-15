@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace qltv.Models
 {
+       
     public partial class Muon
     {
         public int MuonId { get; set; }

@@ -24,9 +24,17 @@ namespace qltv.Controllers
 
         // GET: api/Vitris
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vitri>>> GetVitris()
+        public async Task<ActionResult<IEnumerable<Vitri>>> Search(string search)
         {
-            return await _context.Vitris.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Vitris.ToListAsync();
+            }
+
+            return  await _context.Vitris
+                                        .Where(p => p.Tenhang.Contains(search) ||
+                                                    p.Soke.Contains(search))
+                                        .ToListAsync();
         }
 
         // GET: api/Vitris/5

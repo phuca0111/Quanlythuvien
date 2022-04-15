@@ -24,9 +24,30 @@ namespace qltv.Controllers
 
         // GET: api/Saches
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Sach>>> GetSaches()
+        public async Task<ActionResult<IEnumerable<Sach>>> Search(string search)
         {
-            return await _context.Saches.ToListAsync();
+            if (search == null)
+            {
+                return await _context.Saches.ToListAsync();
+            }
+
+            int namxb;
+            
+            bool success = Int32.TryParse(search, out namxb);
+
+            if (!success)
+            {
+                namxb = 0;
+            }
+
+
+
+            return  await _context.Saches
+                             .Where(p => p.Masach.Contains(search) ||
+                                         p.Tensach.Contains(search) ||
+                                         p.NamXb == namxb)
+                             .ToListAsync();
+
         }
 
         // GET: api/Saches/5

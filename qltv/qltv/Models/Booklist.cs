@@ -6,12 +6,13 @@ using System.Collections.Generic;
 namespace qltv.Models
 {
     public partial class Booklist
-    {
+    {   
+        public string Masach { get; set; }
         public string Tensach { get; set; }
         public string Tentheloai { get; set; }
         public string Tentacgia { get; set; }
         public string Tenxuatban { get; set; }
-        public int NamXb { get; set; }
+        public int NamXb { get; set; } 
         public int Soban { get; set; }
         public string Soke { get; set; }
         public byte[] Img { get; set; }
