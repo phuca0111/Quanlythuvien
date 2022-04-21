@@ -19,7 +19,10 @@ namespace qltv.Models
         public string Sdt { get; set; }
         public string Diachi { get; set; }
         public string Email { get; set; }
+
+       
         public string Username { get; set; }
+       
         public string Matkhau { get; set; }
 
         public virtual ICollection<Muon> Muons { get; set; }
